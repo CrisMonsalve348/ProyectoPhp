@@ -1,6 +1,6 @@
 <?php include "includes/cabecera.php";?>
 
-<form action="index.php" method="post">
+<form action="registro.php" method="post">
     <h1>registrese
     </h1>
     <br>
