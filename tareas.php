@@ -1,8 +1,26 @@
 <?php include "includes/cabecera.php";?>
 
-<?php 
-echo"<h1>Bienvenido, "."</h1>";
+
+<?php
+
+$usuario = $_POST["usuario"];
+if(file_exists("usuarios/$usuario.json")){
+
+    startsesion();
+
+    
+    
+}else{
+    header("Location: index.php");
+}
+
+
+
+
+
+echo"<h1>Bienvenido, $usuario "."</h1>";
 ?>
+
 <h2>tus tareas</h2>
 <a href="">Cerrar sesion</a>
 <br>
