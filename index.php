@@ -1,9 +1,20 @@
-<?php
-include "includes/cabecera.php";
+<?php include "includes/cabecera.php";?>
 
 
-echo "<h1>Hola</h1>";
+<form action="" method="post">
+<h1>Iniciar sesion</h1>
+<input type="text" name="usuario">
+<br>
+<input type="submit">
+</form>
+<h4>Nuevo usuario?</h4>
+<a href="resgistro.php">Resgistrate aqui</a>
 
-include "includes/pie.php";
+<?php 
+    if(empty($_POST["usuario"])){
+        echo "<h2>No se escribio un usuraio</h2>";
+
+    }
 
 ?>
+<?php include "includes/pie.php";?>
