@@ -8,7 +8,7 @@
 <input type="submit">
 </form>
 <h4>Nuevo usuario?</h4>
-<a href="resgistro.php">Resgistrate aqui</a>
+<a href="registro.php">Resgistrate aqui</a>
 
 <?php 
     if(empty($_POST["usuario"])){

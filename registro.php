@@ -1,6 +1,6 @@
 <?php include "includes/cabecera.php";?>
 
-<form action="" method="post">
+<form action="index.php" method="post">
     <h1>registrese
     </h1>
     <br>
@@ -12,12 +12,37 @@
 
 </form>
 
-<?php 
+<?php
+
+//condicional que ayuda a que os campos no se dejen vacios 
 if(isset($_POST["enviar"])){
-if (empty($_POST["Nom_Usuario"])){
-    echo "<h4>el campo esta vacio</h4>";
+if (empty($_POST["Nom_Usuario"]) || empty($_POST["Contraseña"])){
+    echo "<h4>Rellene todos los campos</h4>";
 }
+else {
+$usuario=$_POST["Nom_Usuario"];
+
+
+if(file_exists("usuarios/$usuario.json")){
+    echo "este usuario ya existe";
 }
+else{
+   
+fopen("usuarios/$usuario.json", "a+");
+header("Location: index.php");
+
+}
+
+
+ }
+
+}
+
+
+
+
+
+
 
 ?>
 
