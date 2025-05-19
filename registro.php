@@ -29,6 +29,7 @@ if(file_exists("usuarios/$usuario.json")){
 else{
    
 fopen("usuarios/$usuario.json", "a+");
+file_put_contents("usuarios/$usuario.json", json_encode([]));
 header("Location: index.php");
 
 }
