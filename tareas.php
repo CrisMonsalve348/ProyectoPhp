@@ -14,8 +14,7 @@ if(file_exists("usuarios/$usuario.json")){
     
     
 }else{
-    session_destroy();
-    header("Location: index.php");
+   echo "si";
 }
 
 
@@ -33,7 +32,7 @@ echo"<h1>Bienvenido, $usuario "."</h1>";
 
     $lista = json_decode("usuarios/$usuario.json", true);
     foreach($lista as $elemento){
-        echo "<li>$lista</li>";
+        echo "<li>$elemento</li>";
 
     }
 
